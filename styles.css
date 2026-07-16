@@ -124,17 +124,6 @@ button {
   max-width: 860px;
 }
 
-.hero-content p,
-.section-title p,
-.contact-section p {
-  margin: 0 0 10px;
-  color: #f1c38b;
-  font-size: 0.82rem;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
 h1,
 h2 {
   margin: 0;
@@ -169,30 +158,12 @@ h2 {
   background: var(--cedar-dark);
 }
 
-.intro {
-  padding: clamp(36px, 6vw, 64px) clamp(18px, 5vw, 72px);
-  background: var(--paper-soft);
-}
-
-.intro p {
-  max-width: 920px;
-  margin: 0;
-  color: var(--charcoal);
-  font-size: clamp(1.4rem, 3.5vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.08;
-}
-
 .portfolio-section {
   padding: clamp(52px, 8vw, 96px) clamp(12px, 3vw, 36px) clamp(12px, 3vw, 36px);
 }
 
 .section-title {
   padding: 0 clamp(4px, 1vw, 16px) clamp(26px, 4vw, 42px);
-}
-
-.section-title p {
-  color: var(--cedar);
 }
 
 .portfolio-grid {
@@ -229,26 +200,6 @@ h2 {
 .portfolio-item:focus-visible img {
   transform: scale(1.035);
   filter: saturate(1.06) contrast(1.02);
-}
-
-.work-strip {
-  overflow: hidden;
-  padding: 18px 0;
-  color: var(--paper-soft);
-  background: var(--cedar-dark);
-}
-
-.work-strip div {
-  display: flex;
-  min-width: max-content;
-  gap: clamp(28px, 6vw, 76px);
-  padding-inline: clamp(18px, 5vw, 72px);
-}
-
-.work-strip p {
-  margin: 0;
-  font-size: clamp(1rem, 2.5vw, 1.8rem);
-  font-weight: 900;
 }
 
 .contact-section {
