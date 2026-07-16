@@ -83,11 +83,7 @@ button {
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible,
-.contact-section a:hover,
-.contact-section a:focus-visible,
-.site-footer a:hover,
-.site-footer a:focus-visible {
+.site-nav a:focus-visible {
   color: #f1c38b;
 }
 
@@ -170,26 +166,6 @@ h2 {
 .portfolio-item:focus-visible img {
   transform: scale(1.035);
   filter: saturate(1.06) contrast(1.02);
-}
-
-.contact-section {
-  display: grid;
-  place-items: center;
-  min-height: 34vh;
-  padding: 46px 18px;
-  color: var(--paper-soft);
-  background: var(--forest);
-  text-align: center;
-}
-
-.contact-section h2 {
-  margin-bottom: 18px;
-}
-
-.contact-section a {
-  font-size: clamp(1rem, 2.3vw, 1.8rem);
-  font-weight: 800;
-  overflow-wrap: anywhere;
 }
 
 .site-footer {
