@@ -54,3 +54,39 @@ figcaption{padding-top:14px;border-top:3px solid var(--ink)}
 .product-detail-copy h2{font-weight:700;letter-spacing:.02em}
 :focus-visible{outline-color:var(--rust)}
 @media(max-width:800px){.site-header{min-height:68px}.section-heading{padding-top:14px}.site-nav{background:var(--white)}}
+
+/* Industrial workshop refinement */
+:root{--paper:#d7d5ce;--white:#ebe9e2;--ink:#111516;--muted:#515759;--line:#9da1a0;--steel:#202627;--rust:#9a4f2c}
+body{background:linear-gradient(135deg,#dedcd5 0%,#cfcdc5 100%);font-size:15px}
+.site-header{min-height:70px;background:rgba(23,28,29,.98);color:#f4f2ec;border-bottom:4px solid var(--rust)}
+.wordmark span{font-size:1.9rem;line-height:.78}
+.wordmark small{color:#b9bcb9}
+.site-nav a{font-weight:700;letter-spacing:.17em}
+.menu-toggle span{height:2px;background:#fff}
+.section{padding-block:clamp(58px,7vw,96px)}
+.section-heading{margin-bottom:clamp(28px,4vw,50px);padding:14px 0 0;border-top:5px solid var(--ink)}
+.section-heading .eyebrow{font-size:.8rem;font-weight:700}
+h2{font-size:clamp(3.1rem,5.5vw,5.4rem);font-weight:700;line-height:.86;letter-spacing:.025em}
+.section-heading>p:last-child{font-weight:500}
+.work-grid,.shop-grid{gap:clamp(26px,3.5vw,48px) clamp(16px,2.5vw,34px)}
+.image-button,.product-image{filter:saturate(.9) contrast(1.04)}
+figcaption{padding:13px 0 4px;border-top:5px solid var(--ink)}
+.work-item h3,.product-card h3{font-size:1.5rem;font-weight:700;letter-spacing:.035em}
+.work-item p{max-width:560px;font-weight:500}
+.shop-section{background:var(--steel);color:#f5f3ec;border-top:6px solid var(--rust)}
+.shop-section .section-heading{border-color:#f5f3ec}
+.shop-section .product-card{border-top:5px solid #6b7272}
+.shop-section .product-card p{color:#b9bdbc}
+.shop-section .product-copy{padding:16px 0 24px}
+.shop-section .product-card.available{border-top-color:var(--rust)}
+.shop-section .product-card.available h3{font-size:clamp(2.8rem,4.5vw,4.8rem)}
+.shop-section .purchase-row strong{color:#fff;font-size:2.15rem}
+.shop-section .button-dark{background:var(--rust);border-color:var(--rust);color:#fff}
+.shop-section .button-dark:hover,.shop-section .button-dark:focus-visible{background:#b46238;border-color:#b46238}
+.status{padding:8px 13px;background:#141819;border-left:3px solid var(--rust)}
+.available-status{background:#f2efe7;color:var(--ink);border:0;border-left:3px solid var(--rust)}
+.product-detail-dialog{background:#d9d7d0}
+.product-detail-copy{border-top:5px solid var(--rust)}
+.product-detail-copy h2{font-size:clamp(2.8rem,5vw,5rem);line-height:.9}
+.site-footer{border-top:6px solid var(--rust)}
+@media(max-width:800px){.site-nav{background:var(--steel);color:#fff}.site-nav a{border-color:#4f5657}}
