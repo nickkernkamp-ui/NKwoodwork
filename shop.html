@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shop handmade wood furniture by NK Woodwork.">
+    <title>Shop | NK Woodwork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="shop-page">
+    <header class="site-header solid-header">
+      <a class="brand" href="index.html" aria-label="NK Woodwork home">
+        <span class="brand-mark">NK</span>
+        <span>Woodwork</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Portfolio</a>
+        <a href="shop.html" aria-current="page">Shop</a>
+      </nav>
+    </header>
+
+    <main class="shop-main">
+      <section class="product-showcase" aria-label="Aleppo Pine Desk">
+        <div class="product-shot product-shot-main">
+          <button class="product-image-trigger" type="button" data-full="assets/images/live-edge-desk-angle.jpeg" data-title="Aleppo Pine Desk — angled view">
+            <img src="assets/images/live-edge-desk-angle.jpeg" alt="Aleppo pine desk with black metal legs, shown beside a chair">
+          </button>
+          <span class="product-overlay">
+            <span class="product-name">Aleppo Pine Desk</span>
+            <span class="product-purchase">
+              <span class="product-price">$2,500</span>
+              <a class="buy-button" href="https://buy.stripe.com/bJe5kD5R5fzK0Cw1165Vu05" target="_blank" rel="noopener noreferrer" aria-label="Buy the Aleppo Pine Desk securely with Stripe for $2,500">Buy</a>
+            </span>
+          </span>
+        </div>
+        <button class="product-shot" type="button" data-full="assets/images/live-edge-desk-top.jpeg" data-title="Aleppo Pine Desk — top view">
+          <img src="assets/images/live-edge-desk-top.jpeg" alt="Top view of the Aleppo pine desk with a laptop and desk lamp">
+        </button>
+        <button class="product-shot" type="button" data-full="assets/images/live-edge-desk-detail.jpeg" data-title="Aleppo Pine Desk — wood detail">
+          <img src="assets/images/live-edge-desk-detail.jpeg" alt="Close-up of the Aleppo pine grain and natural edge">
+        </button>
+        <button class="product-shot" type="button" data-full="assets/images/live-edge-desk-side.jpeg" data-title="Aleppo Pine Desk — side view">
+          <img src="assets/images/live-edge-desk-side.jpeg" alt="Side view of the Aleppo pine desk and black metal legs">
+        </button>
+      </section>
+    </main>
+
+    <dialog class="lightbox" aria-label="Product image preview">
+      <button class="lightbox-close" type="button" aria-label="Close preview">×</button>
+      <img src="assets/images/live-edge-desk-angle.jpeg" alt="">
+      <p></p>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@
 
 .shop-product-gallery{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;background:var(--paper)}
 .shop-product-gallery img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
-.shop-product-open{display:block;width:100%;border:0;padding:0;cursor:pointer}
+.shop-product-open,.eucalyptus-product-open,.sycamore-product-open,.coasters-product-open,.redwood-product-open,.bowls-product-open{display:block;width:100%;border:0;padding:0;cursor:pointer}
 .product-detail-dialog{width:min(1200px,calc(100% - 30px));max-height:92vh;border:0;padding:0;background:var(--paper);color:var(--ink)}
 .product-detail-dialog::backdrop{background:rgba(0,0,0,.82)}
 .product-dialog-close{position:fixed;top:18px;right:18px;z-index:3;width:46px;height:46px;border:0;background:rgba(20,20,18,.82);color:#fff;font-size:1.8rem;cursor:pointer}
@@ -19,3 +19,38 @@
 .product-detail-copy dl div:last-child{border:0}
 .product-detail-copy dd{margin:0;text-align:right}
 @media(max-width:600px){.product-detail-gallery{grid-template-columns:1fr}.product-dialog-close{position:fixed}.product-detail-copy .purchase-row{align-items:stretch;flex-direction:column}}
+
+/* Refined workshop direction */
+:root{--paper:#e7e5df;--white:#f4f3ef;--ink:#171a1b;--muted:#5b5f60;--line:#b8b9b5;--steel:#303638;--rust:#8a4b2c}
+body{letter-spacing:.005em}
+.site-header{min-height:74px;background:rgba(244,243,239,.97);border-bottom:2px solid var(--ink)}
+.wordmark{font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.1em}
+.wordmark span{font-size:1.75rem}
+.wordmark small{font-size:.62rem}
+.site-nav a,.eyebrow,.status,.button{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.13em}
+.site-nav a{font-size:.9rem}
+.section{padding-block:clamp(68px,8vw,118px)}
+.section-heading{max-width:760px;margin-bottom:clamp(34px,4.5vw,62px);padding-top:18px;border-top:3px solid var(--ink)}
+.section-heading .eyebrow{color:var(--rust)}
+h2,.work-item h3,.product-card h3,.product-detail-copy h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase}
+h2{font-size:clamp(2.8rem,5vw,4.8rem);font-weight:700;line-height:.92;letter-spacing:.015em}
+.work-grid,.shop-grid{gap:clamp(30px,4.5vw,64px) clamp(20px,3vw,42px)}
+.image-button,.product-image{background:#c8c7c1}
+figcaption{padding-top:14px;border-top:3px solid var(--ink)}
+.work-item h3,.product-card h3{font-size:1.35rem;font-weight:600;line-height:1.05;letter-spacing:.025em}
+.work-item p,.product-card p{font-size:.94rem}
+.shop-section{background:var(--white);border-top:1px solid var(--line)}
+.product-card{border-top:3px solid var(--ink)}
+.product-copy{padding:17px 0}
+.product-card.available h3{font-size:clamp(2.4rem,4vw,4.2rem);font-weight:700;letter-spacing:.02em}
+.status{right:0;top:0;border-radius:0;background:var(--steel)}
+.available-status{background:var(--white);color:var(--ink);border:1px solid var(--ink)}
+.button{min-height:52px;padding:13px 25px;border-width:2px}
+.button-dark{background:var(--steel);border-color:var(--steel)}
+.button-dark:hover,.button-dark:focus-visible{background:var(--rust);border-color:var(--rust)}
+.purchase-row strong{font-family:"Barlow Condensed",sans-serif;font-size:1.85rem;font-weight:700;letter-spacing:.025em}
+.site-footer{background:var(--steel);color:#fff;border-top:4px solid var(--rust)}
+.site-footer p{color:#c9cbca}
+.product-detail-copy h2{font-weight:700;letter-spacing:.02em}
+:focus-visible{outline-color:var(--rust)}
+@media(max-width:800px){.site-header{min-height:68px}.section-heading{padding-top:14px}.site-nav{background:var(--white)}}
