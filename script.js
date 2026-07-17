@@ -1,23 +1,5 @@
-const lightbox = document.querySelector(".lightbox");
-const lightboxImage = lightbox?.querySelector("img");
-const lightboxCaption = lightbox?.querySelector("p");
-const lightboxClose = lightbox?.querySelector(".lightbox-close");
+const menuButton=document.querySelector('.menu-toggle');const navigation=document.querySelector('.site-nav');menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));menuButton.setAttribute('aria-label',open?'Open navigation':'Close navigation');navigation?.classList.toggle('open',!open);document.body.classList.toggle('menu-open',!open)});navigation?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navigation.classList.remove('open');menuButton?.setAttribute('aria-expanded','false');menuButton?.setAttribute('aria-label','Open navigation');document.body.classList.remove('menu-open')}));
 
-document.querySelectorAll(".portfolio-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    if (!lightbox || !lightboxImage || !lightboxCaption) return;
+const workImages=[...document.querySelectorAll('.image-button')];const lightbox=document.querySelector('#lightbox');const lightboxImage=lightbox?.querySelector('img');const lightboxCaption=lightbox?.querySelector('p');let activeIndex=0;function showImage(index){if(!lightbox||!lightboxImage||!lightboxCaption||!workImages.length)return;activeIndex=(index+workImages.length)%workImages.length;const source=workImages[activeIndex].querySelector('img');lightboxImage.src=source.src;lightboxImage.alt=source.alt;lightboxCaption.textContent=workImages[activeIndex].closest('figure')?.querySelector('h3')?.textContent||''}workImages.forEach((button,index)=>button.addEventListener('click',()=>{showImage(index);lightbox?.showModal()}));lightbox?.querySelector('.lightbox-close')?.addEventListener('click',()=>lightbox.close());lightbox?.querySelector('.prev')?.addEventListener('click',()=>showImage(activeIndex-1));lightbox?.querySelector('.next')?.addEventListener('click',()=>showImage(activeIndex+1));lightbox?.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close()});document.addEventListener('keydown',event=>{if(!lightbox?.open)return;if(event.key==='Escape')lightbox.close();if(event.key==='ArrowLeft')showImage(activeIndex-1);if(event.key==='ArrowRight')showImage(activeIndex+1)});
 
-    lightboxImage.src = item.dataset.full;
-    lightboxImage.alt = item.querySelector("img")?.alt || "";
-    lightboxCaption.textContent = item.dataset.title || "";
-    lightbox.showModal();
-  });
-});
-
-lightboxClose?.addEventListener("click", () => lightbox.close());
-
-lightbox?.addEventListener("click", (event) => {
-  if (event.target === lightbox) {
-    lightbox.close();
-  }
-});
+const contactForm=document.querySelector('#contact-form');const formMessage=document.querySelector('#form-message');contactForm?.addEventListener('submit',event=>{if(!contactForm.checkValidity()){event.preventDefault();contactForm.reportValidity();if(formMessage)formMessage.textContent='Please complete all required fields.';return}if(contactForm.action.includes('REPLACE_WITH_FORM_ID')){event.preventDefault();if(formMessage)formMessage.textContent='This form is not connected yet. Add your Formspree form ID before publishing.'}});const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();

@@ -1,52 +1,27 @@
 # NK Woodworks Website
 
-A static website for NK Woodworks with a home section, image portfolio, and contact section.
+Static HTML, CSS, and JavaScript website prepared for GitHub Pages.
 
-## Files
+## Publish on GitHub Pages
 
-- `index.html` is the website content.
-- `styles.css` controls the design.
-- `script.js` controls the image preview.
-- `assets/images/` contains web-ready images.
-- `assets/originals/` contains the original uploaded photos.
+1. Create a new repository on GitHub.
+2. Upload everything in this folder to the root of the repository.
+3. Open the repository's **Settings → Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select the `main` branch and `/ (root)`, then save.
 
-## Preview
+The included `CNAME` file connects the site to `nk-woodwork.com`. Keep this file in the repository. Confirm the domain's DNS records point to GitHub Pages before using the custom domain.
 
-Open `index.html` in your browser, or run a small local server:
+## Update the site
 
-```bash
-python3 -m http.server 8000
-```
+- Edit product names, descriptions, availability, and price in `index.html`.
+- The Aleppo Pine Desk and Osage Orange Sculpture public Stripe Payment Links are in `index.html` on their **Purchase** buttons.
+- Never add Stripe secret keys to GitHub.
+- Replace a photo by putting the replacement in `images/` with the same filename.
+- The portfolio and shop use the same product image filenames.
+- Mark a product sold by using the `sold` card style, adding the **Sold** badge, and removing any purchase link.
+- Change the custom domain by editing `CNAME`; do not delete it while using a custom domain.
 
-Then open:
+## Preview locally
 
-```text
-http://localhost:8000
-```
-
-## Upload To GitHub
-
-Create a new GitHub repository first. Then run these commands inside this folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial NK Woodworks website"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/nk-woodworks-website.git
-git push -u origin main
-```
-
-Replace `YOUR-USERNAME` with your GitHub username.
-
-## Turn On GitHub Pages
-
-1. Open the repository on GitHub.
-2. Go to `Settings`.
-3. Click `Pages`.
-4. Under `Build and deployment`, choose `Deploy from a branch`.
-5. Choose branch `main`.
-6. Choose folder `/root`.
-7. Click `Save`.
-
-GitHub will give you a live website link after it finishes publishing.
+Open `index.html` in a web browser. No installation, server, database, or build step is required.
